@@ -3,7 +3,7 @@ Description=Health Logger for Ceph
 Wants=network.target
 
 [Service]
-Type=forking
+Type=simple
 Environment="CEPH_ARGS=--conf /etc/ceph/ceph.conf"
 ExecStart=python3 /usr/src/healthlogger/healthlogger.py
 User=
