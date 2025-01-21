@@ -25,6 +25,9 @@ def main():
         if result.stdout.startswith('HEALTH_OK'):
             ceph_result = 1.0
 
+        if result.stdout.startswith('HEALTH_WARN'):
+            ceph_result = 0.75
+
         if result.stdout.startswith('HEALTH_ERR'):
             ceph_result = 0.5
             
